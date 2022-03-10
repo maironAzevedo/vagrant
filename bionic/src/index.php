@@ -1,14 +1,15 @@
 <?php
-    echo "Testando conexao <br/> <br/>";
-    $servername = "192.168.1.24";
-    $username = "phpuser";
-    $password = "pass";
+echo "Testando conexao <br /> <br />";
+$servername = "192.168.1.24";
+$username = "phpuser";
+$password = "pass";
 
-    $conn = new mysqli($servername, $username, $password);
+// Create connection
+$conn = new mysqli($servername, $username, $password);
 
-    if ($conn -> connect_error) {
-        die("Conexão falhou: ". $conn->connect_error);
-    }
-
-    echo "Conectado com sucesso";
+// Check connection
+if ($conn->connect_error) {
+    die("Conexão falhou: " . $conn->connect_error);
+}
+echo "Connetado com sucesso";
 ?>
